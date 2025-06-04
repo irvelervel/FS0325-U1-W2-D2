@@ -72,4 +72,4 @@ fufi.age = 6
 // al di fuori dell'oggetto, torna ad essere =
 console.log(fufi)
 
-fufi = 100
+// fufi = 100 // ERRORE DI RIASSEGNAZIONE
