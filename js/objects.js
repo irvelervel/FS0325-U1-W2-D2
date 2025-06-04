@@ -72,4 +72,40 @@ fufi.age = 6
 // al di fuori dell'oggetto, torna ad essere =
 console.log(fufi)
 
+// AGGIUNGERE PROPRIETÀ NUOVE
+fufi.collar = true
+fufi.friends = 20
+
+// ELIMINARE PROPRIETÀ ESISTENTI
+delete fufi.sterilized
+console.log(fufi)
+
+// il fatto che fufi sia stato dichiarato come "const" non preclude in alcun modo
+// tutte le possibili manipolazioni che potete apportare a quell'oggetto
+// anzi, gli oggetti si dichiarano SEMPRE come const!
 // fufi = 100 // ERRORE DI RIASSEGNAZIONE
+
+// ESEMPIO
+let a = 5
+let b = a
+
+b = 10
+console.log(a) // 5
+
+//
+
+const objA = {
+  name: 'Stefano',
+}
+
+const objB = objA // in caso di entità complesse, JS non alloca nuovi riferimenti in memoria
+// per objB ma "ricicla" l'oggetto precedente! quindi avete UN oggetto in memoria con
+// due "riferimenti" (nomi)
+
+// per risolvere dovremmo trovare il modo di "costringere" JS ad allocare un nuovo spazio
+// in memoria per il mio oggetto "copia"
+// si possono creare veri e propri "cloni" di oggetti/array tramite metodi come
+// Object.assign() e la tecnica dello "spread operator" (...)
+
+objB.name = 'Mario'
+console.log(objA.name) // ?
